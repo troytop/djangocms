@@ -1,7 +1,7 @@
 ---
 applications:
   - name: djangocms
-    memory: 128M
+    memory: 256M
     disk_quota: 512M
     buildpack: python_buildpack
     # services:
