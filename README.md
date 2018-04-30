@@ -30,15 +30,15 @@ Setup
 Before you can use the site, you must run the database migration. Using the `cf
 run-task` command is the easiest way to do this:
 
-  $ cf run-task djangocms "python manage.py migrate" --name migrate
+    $ cf run-task djangocms "python manage.py migrate" --name migrate
 
 To create the initial superuser for the site, use `cf ssh` to run the
 `createsuperuer` script.
 
-  $ cf ssh djangocms
-  bash-4.3$ /tmp/lifecycle/shell # loads app python env
-  bash-4.3$ django manage.py createsuperuser
-  ...
+    $ cf ssh djangocms
+    bash-4.3$ /tmp/lifecycle/shell # loads app python env
+    bash-4.3$ django manage.py createsuperuser
+    ...
 
 When the first admin user has been created, you can start [using Django
 CMS](http://docs.django-cms.org/en/latest/how_to/index.html#).
