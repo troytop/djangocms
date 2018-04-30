@@ -1,0 +1,12 @@
+---
+applications:
+  - name: djangocms
+    memory: 128M
+    disk_quota: 512M
+    buildpack: python_buildpack
+    services:
+    - djangocms-db
+    env:
+      DISABLE_COLLECTSTATIC: 1
+      #  DJANGO_SETTINGS_MODULE: settings
+    timeout: 180 
