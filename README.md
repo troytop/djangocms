@@ -37,7 +37,7 @@ To create the initial superuser for the site, use `cf ssh` to run the
 
     $ cf ssh djangocms
     bash-4.3$ /tmp/lifecycle/shell # loads app python env
-    bash-4.3$ django manage.py createsuperuser
+    bash-4.3$ python manage.py createsuperuser
     ...
 
 When the first admin user has been created, you can start [using Django
