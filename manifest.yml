@@ -3,7 +3,10 @@ applications:
   - name: djangocms
     memory: 256M
     disk_quota: 512M
-    buildpack: python_buildpack
+    buildpacks: 
+    - python_buildpack
+    # To use a real PostgreSQL service on CF uncomment the services block 
+    # django will use the local project.db if there is no VCAP_SERVICES
     # services:
     # - djangocms-db
     env:

@@ -186,7 +186,7 @@ if 'DATABASE_URL' in os.environ:
         'HOST': url.hostname,
         'PORT': url.port,
     }
-    if url.scheme == 'postgres':
+    if url.scheme == 'postgresql' or 'postgres':
         DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
     elif url.scheme == 'mysql':
         DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
